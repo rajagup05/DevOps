@@ -8,3 +8,7 @@
 - used `sudo su - to switch/login` as a root user.
 - used  `chmod a+rwx /tmp/xfusioncorp.sh` to add execute permissions for all users.
 - used `ls -l /tmp/xfusioncorp.sh` to confirm if all the permissions are added.
+
+To run script used `$ bash /tmp/xfusioncorp.sh`and got below output: 
+
+`Welcome !`
