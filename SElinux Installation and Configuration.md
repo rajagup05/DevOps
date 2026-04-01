@@ -12,4 +12,8 @@ Disregard the current status of SELinux via the command line; the final status a
 
 >   didn't changed SELINUXTYPE and let it be default to targeted.
 
+- To verify Configuration used command: `cat /etc/selinux/config` to check the changes made.
+
+> [!NOTE]
+> As requested, a immediate reboot is not necessary; the disabled state will take effect upon the scheduled restart. 
 
