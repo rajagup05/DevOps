@@ -17,3 +17,5 @@ Disregard the current status of SELinux via the command line; the final status a
 > [!NOTE]
 > As requested, a immediate reboot is not necessary; the disabled state will take effect upon the scheduled restart. 
 
+> [!NOTE]
+> yum and apt are package managers for Linux, with yum (using .rpm) serving RHEL/CentOS/Fedora and apt (using .deb) serving Debian/Ubuntu
