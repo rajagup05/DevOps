@@ -8,3 +8,8 @@ No need to reboot the server, as a scheduled maintenance reboot is already plann
 Disregard the current status of SELinux via the command line; the final status after the reboot should be disabled**
 
 - Installed Required SELinux Packages using command: `sudo yum install -y policycoreutils policycoreutils-python-utils selinux-policy selinux-policy-targeted libselinux-utils setroubleshoot-server setools setools-console`
+- To Permanently Disable SELinux, used command: `sudo vi /etc/selinux/config` to open the file  and Changed the SELINUX line to disabled: `SELINUX=disabled`
+
+>   didn't changed SELINUXTYPE and let it be default to targeted.
+
+
