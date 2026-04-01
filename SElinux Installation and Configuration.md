@@ -1,4 +1,10 @@
 
 ## Day 5: SElinux Installation and Configuration
 
-`Task`: **Install the required SELinux packages. Permanently disable SELinux for the time being; it will be re-enabled after necessary configuration changes. No need to reboot the server, as a scheduled maintenance reboot is already planned for tonight. Disregard the current status of SELinux via the command line; the final status after the reboot should be disabled**
+`Task`: 
+**Install the required SELinux packages.  \
+Permanently disable SELinux for the time being; it will be re-enabled after necessary configuration changes. \ 
+No need to reboot the server, as a scheduled maintenance reboot is already planned for tonight. \
+Disregard the current status of SELinux via the command line; the final status after the reboot should be disabled**
+
+- Installed Required SELinux Packages using command: `sudo yum install -y policycoreutils policycoreutils-python-utils selinux-policy selinux-policy-targeted libselinux-utils setroubleshoot-server setools setools-console`
