@@ -15,5 +15,7 @@ solution:
 - used `sudo su -` to change/switch to root user.
 - used `crontab -e` to open a crontab vim editor
 - and wrote: `*/5 * * * * echo hello > /tmp/cron_text` , saved and exited
+- used `ls -l /tmp/cron_text` to check if `cron_text` file is created after 5 minutes.
+- used `cat /tmp/cron_text` to see if output is ran after previous check for existence.
 
 
