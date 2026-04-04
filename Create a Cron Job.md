@@ -23,3 +23,8 @@ solution:
 
 - used `echo $EDITOR` to see the current default editor. It outputs blank means its either vim or VI.
 - To change this editor environment variable, I used `export EDITOR=nano`
+
+**`sudo -i` vs `sudo su -`**
+
+The `sudo -i` command is used to start an interactive root shell on a Linux system. While the standard `sudo` command runs a single command with elevated privileges, `sudo -i` (the interactive flag) logs you in as the root user, loading that user's environment, including their specific shell variables and home directory.  It typically requires your own user password, not the root password,
+
