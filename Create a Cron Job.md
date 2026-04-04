@@ -19,3 +19,7 @@ solution:
 - used `cat /tmp/cron_text` to see if output is ran after previous check for existence.
 
 
+**To change env variable of `editor`: **
+
+- used `echo $EDITOR` to see the current default editor. It outputs blank means its either vim or VI.
+- To change this editor environment variable, I used `export EDITOR=nano`
