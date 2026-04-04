@@ -14,7 +14,7 @@ solution:
 - used `systemctl start crond` to crond service
 - used `sudo su -` to change/switch to root user.
 - used `crontab -e` to open a crontab vim editor
-- and wrote: `*/5 * * * * echo hello > /tmp/cron_text` , saved and exited
+- and wrote: `*/5 * * * * echo hello > /tmp/cron_text` , saved and exited => The cron expression `*/5 * * * *` is used to schedule a command to run every 5 minutes, every day
 - used `ls -l /tmp/cron_text` to check if `cron_text` file is created after 5 minutes.
 - used `cat /tmp/cron_text` to see if output is ran after previous check for existence.
 
