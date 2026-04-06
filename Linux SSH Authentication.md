@@ -6,7 +6,7 @@
 $ `ssh-keygen -t ed25519 -C "thor@jump-host"` 
 => Here, 
 - I am creating a key in jump host server,
-- `-t` indicates type of kry
+- `-t` indicates type of key
 - `-C` is used to specify a comment
 
 output of above commands will be as mentioned below:
@@ -55,3 +55,8 @@ Now try logging into the machine, with: "ssh 'user2@server2'"
 and check to make sure that only the key(s) you wanted were added.
 
 ```
+
+$ `thor@jump-host ~$ ssh steve@server2` \
+**output:** `[steve@stapp02 ~]$`
+
+=> after ocopying the key from thor's server to server2, SSH'ing would not ask for password.
