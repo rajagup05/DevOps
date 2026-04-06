@@ -34,3 +34,24 @@ The key's randomart image is:
 +----[SHA256]-----+
 
 ```
+
+$ `ssh-copy-id user2@server2` 
+=> Here, I am copying the generated key in thor's server to user2's server.
+
+Below is the output: 
+```
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/thor/.ssh/id_ed25519.pub"
+The authenticity of host 'server2 (IP_address)' can't be established.
+ED25519 key fingerprint is SHA256:QxUfpVB36Ccq3XvBW6cZnU0Bhlvu5uo5euCJ1cpXDyE.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+steve@stapp02's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with: "ssh 'user2@server2'"
+and check to make sure that only the key(s) you wanted were added.
+
+```
