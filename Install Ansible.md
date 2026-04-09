@@ -19,3 +19,6 @@ Complete!
 - used $ `sudo pip3 install ansible==4.10.0` to install ansible of version `4.10.0` using `pip3`
 
 - used $ `ansible –version` to check the ansible version
+
+> [!NOTE]
+> $ `python3 -m pip install --user ansible==[ansible version]` can be used to install specific version of ansible using pip in python3 path 
