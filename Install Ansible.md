@@ -17,3 +17,5 @@ Complete!
 ```
 
 - used $ `sudo pip3 install ansible==4.10.0` to install ansible of version `4.10.0` using `pip3`
+
+- used $ `ansible –version` to check the ansible version
