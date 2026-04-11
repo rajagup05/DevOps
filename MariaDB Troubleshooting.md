@@ -60,3 +60,11 @@ See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for
 ```
 
 The error **Errcode: 13 "Permission denied" for the file /run/mariadb/mariadb.pid** means the MariaDB process doesn't have the rights to write its process ID file to that folder. This is a common issue after updates or manual configuration changes.
+
+- used below commands to make sure
+```
+sudo mkdir -p /run/mariadb
+sudo chown -R mysql:mysql /run/mariadb
+sudo chmod 755 /run/mariadb
+```
+
