@@ -35,3 +35,26 @@ Password:
 Job for mariadb.service failed because a fatal signal was delivered causing the control process to dump core.
 See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for details.
 ```
+- used $ `sudo tail -n 20 /var/log/mariadb/mariadb.log` to see the logs and error message
+```
+2026-04-09 13:12:43 0 [Note] InnoDB: Using AVX512 instructions
+2026-04-09 13:12:43 0 [Note] mariadbd: O_TMPFILE is not supported on /var/tmp (disabling future attempts)
+2026-04-09 13:12:43 0 [Note] InnoDB: Using Linux native AIO
+2026-04-09 13:12:43 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2026-04-09 13:12:43 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-04-09 13:12:43 0 [Note] InnoDB: Setting log file ./ib_logfile101 size to 100663296 bytes
+2026-04-09 13:12:43 0 [Note] InnoDB: Renaming log file ./ib_logfile101 to ./ib_logfile0
+2026-04-09 13:12:43 0 [Note] InnoDB: New log file created, LSN=45091
+2026-04-09 13:12:43 0 [Note] InnoDB: 128 rollback segments are active.
+2026-04-09 13:12:43 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2026-04-09 13:12:43 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-04-09 13:12:43 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-04-09 13:12:43 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2026-04-09 13:12:43 0 [Note] InnoDB: 10.5.29 started; log sequence number 0; transaction id 20
+2026-04-09 13:12:43 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-04-09 13:12:43 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2026-04-09 13:12:43 0 [Note] InnoDB: Buffer pool(s) load completed at 260409 13:12:43
+2026-04-09 13:12:43 0 [Note] Server socket created on IP: '::'.
+2026-04-09 13:12:43 0 [ERROR] mariadbd: Can't create/write to file '/run/mariadb/mariadb.pid' (Errcode: 13 "Permission denied")
+2026-04-09 13:12:43 0 [ERROR] Can't start server: can't create PID file: Permission denied 
+```
