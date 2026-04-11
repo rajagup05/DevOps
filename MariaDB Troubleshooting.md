@@ -14,3 +14,24 @@ mariadb.service - MariaDB 10.5 database server
        Docs: man:mariadbd(8)
              https://mariadb.com/kb/en/library/systemd/
 ```
+
+As a basic step, I tried to stop and start the mariaDB service to see if it comes back online:
+```
+$ systemctl stop mariadb
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+Authentication is required to stop 'mariadb.service'.
+Authenticating as: peter
+Password: 
+==== AUTHENTICATION COMPLETE ====
+```
+
+- used $ `systemctl start mariadb` to see if it resolves the issue but it failed and provided 2 commands to troubleshoot further.
+```
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+Authentication is required to start 'mariadb.service'.
+Authenticating as: peter
+Password: 
+==== AUTHENTICATION COMPLETE ====
+Job for mariadb.service failed because a fatal signal was delivered causing the control process to dump core.
+See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for details.
+```
