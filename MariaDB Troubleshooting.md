@@ -58,3 +58,5 @@ See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for
 2026-04-09 13:12:43 0 [ERROR] mariadbd: Can't create/write to file '/run/mariadb/mariadb.pid' (Errcode: 13 "Permission denied")
 2026-04-09 13:12:43 0 [ERROR] Can't start server: can't create PID file: Permission denied 
 ```
+
+The error **Errcode: 13 "Permission denied" for the file /run/mariadb/mariadb.pid** means the MariaDB process doesn't have the rights to write its process ID file to that folder. This is a common issue after updates or manual configuration changes.
