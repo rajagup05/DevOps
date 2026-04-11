@@ -61,10 +61,19 @@ See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for
 
 The error **Errcode: 13 "Permission denied" for the file /run/mariadb/mariadb.pid** means the MariaDB process doesn't have the rights to write its process ID file to that folder. This is a common issue after updates or manual configuration changes.
 
-- used below commands to make sure
+- To Fix Directory Ownership and Permissions
+The directory `/run/mariadb/` must be owned by the mysql user. ran following commands:
 ```
 sudo mkdir -p /run/mariadb
 sudo chown -R mysql:mysql /run/mariadb
 sudo chmod 755 /run/mariadb
 ```
+- Checked for "Ghost" PID Files: If an old PID file exists with the wrong permissions, the service will fail to overwrite it.
+```
+sudo rm -f /run/mariadb/mariadb.pid
+```
+- On many Linux systems, /run is a temporary filesystem (tmpfs) wiped on reboot. If the folder disappears, MariaDB can't recreate it. Ensure the systemd configuration handles this: `sudo systemd-tmpfiles --create`
 
+- tried starting the service now using the command: `sudo systemctl start mariadb`
+
+permission denied error is gone and mariaDB service is up and running now
