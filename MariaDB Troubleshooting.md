@@ -76,4 +76,4 @@ sudo rm -f /run/mariadb/mariadb.pid
 
 - tried starting the service now using the command: `sudo systemctl start mariadb`
 
-permission denied error is gone and mariaDB service is up and running now
+permission denied error is gone and mariaDB service is up and running now when used $ `systemctl status mariadb` 
