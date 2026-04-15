@@ -5,7 +5,7 @@
 
 a. Create a zip archive named `xfusioncorp_beta.zip` of `/var/www/html/beta` directory.
 
-b. Save the archive in `/backup/` on App Server 3. This is a temporary storage, as backups from this location will be cleaned on a weekly basis. Therefore, we also need to save this backup archive on Nautilus Storage Server.
+b. Save the archive in `/backup/` on App Server 3. This is a temporary storage, as backups from this location will be cleaned on a weekly basis. Therefore, we also need to save this backup archive on Storage Server.
 
 c. Copy the created archive to Nautilus Storage Server server in `/backup/` location.
 
@@ -15,3 +15,8 @@ e. Do not use sudo inside the script.
 
 > [!NOTE]
 > The zip package must be installed on given App Server before executing the script. This package is essential for creating the zip archive of the website files. Install it manually outside the script.
+
+**solution:** 
+
+- used $ `ssh user3@server3` to ssh into the server3.
+- used $ `cd /scripts/` to change the directory
