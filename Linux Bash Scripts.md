@@ -28,4 +28,19 @@ total 0
 -rwxr-xr-x 1 banner banner 0 Apr 10 11:10 beta_backup.
 ```
 
-- 
+- used $ `ls -l /var/www/html/beta/` =>
+```
+total 4
+-rw-r--r-- 1 root root 38 Apr 10 11:03 index.html
+```
+- used $ `sudo yum install zip` to install zip  and found it already exists:
+```
+Last metadata expiration check: 1:33:38 ago on Fri Apr 10 09:42:46 2026.
+Package zip-3.0-35.el9.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+```
+
+
+
