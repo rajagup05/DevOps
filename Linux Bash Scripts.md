@@ -21,3 +21,11 @@ e. Do not use sudo inside the script.
 - used $ `ssh user3@server3` to ssh into the server3.
 - used $ `cd /scripts/` to change the directory
 - used $ `touch beta_backup.sh` to create a shell script under `/scripts/` directory/path.
+- used $ `sudo chmod 755 /scripts/beta_backup.sh` to give execute permissions to current user for this script file.
+- used $ `ls -l /scripts/` to list the details of this file with permissions and below is the output:
+```
+total 0
+-rwxr-xr-x 1 banner banner 0 Apr 10 11:10 beta_backup.
+```
+
+- 
