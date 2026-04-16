@@ -42,5 +42,22 @@ Nothing to do.
 Complete!
 ```
 
+- created script and viewed using command $ `cat /scripts/beta_backup.sh`, Here I am creating a zip/archive file of `/var/www/html/beta` directory, then used scp command to copy the archive file to storage server's /backup/ location, and finally running `bash test.sh` as we cant use sudo to provide execute permission for storage server user:
+```
+#!/bin/bash
 
+zip -r /backup/xfusioncorp_beta.zip /var/www/html/beta
+
+scp "/backup/xfusioncorp_beta.zip" "ssh natasha@ststor01:/backup/"
+
+ssh natasha@ststor01 "bash test.sh"
+
+echo "task complete" 
+
+```
+- additionally, created srcipt file in storage server as seen below, to provide sxecute perms to storage user to run the copied archive file:
+```
+#!/bin/bash 
+sudo chmod u+x /backup/xfusioncorp_beta.zip
+```
 
