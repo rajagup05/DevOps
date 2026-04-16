@@ -20,3 +20,4 @@ e. Do not use sudo inside the script.
 
 - used $ `ssh user3@server3` to ssh into the server3.
 - used $ `cd /scripts/` to change the directory
+- used $ `touch beta_backup.sh` to create a shell script under `/scripts/` directory/path.
