@@ -89,3 +89,4 @@ echo "task complete"
 sudo chmod u+x /backup/xfusioncorp_beta.zip
 ```
 
+- used $ `sudo bash /scripts/beta_backup.sh` to run the script and it created a zip file, copied to storage server and added perms to target user.
