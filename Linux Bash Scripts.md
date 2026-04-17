@@ -42,6 +42,34 @@ Nothing to do.
 Complete!
 ```
 
+- used $ `ssh-keygen -t rsa` to create a temporary  key on server 3:
+
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/banner/.ssh/id_rsa): 
+Created directory '/home/user3/.ssh'.
+Enter passphrase for "/home/user3/.ssh/id_rsa" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/user3/.ssh/id_rsa
+Your public key has been saved in /home/user3/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:nh+5K3FJ27oG0mctjxq5ttqy3N3e7bGWxH6qly5BZTE banner@stapp03
+The key's randomart image is:
++---[RSA 3072]----+
+|              E. |
+|              o. |
+|             o   |
+|          . .    |
+|       .S. *  .  |
+|      ..+oB.+  o |
+|       .=*o= .oo.|
+|     ..oo=++o.o=+|
+|      +=*=*++==++|
++----[SHA256]-----+ 
+```
+
+- used $ `ssh-copy-id natasha@ststor01` to copy this key into storage server, after this we can login directly to storage server without any password and this is helpful in logging to that server and running commands mentioned in bash script `/scripts/beta_backup.sh` in this server3
+ 
 - created script and viewed using command $ `cat /scripts/beta_backup.sh`, Here I am creating a zip/archive file of `/var/www/html/beta` directory, then used scp command to copy the archive file to storage server's /backup/ location, and finally running `bash test.sh` as we cant use sudo to provide execute permission for storage server user:
 ```
 #!/bin/bash
