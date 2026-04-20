@@ -33,5 +33,56 @@ drwxr-xr-x 2 root tomcat   4096 Apr 17 06:39 conf.d
 
 ### 2. Configure Port 3001
 
-- used $ `sudo vi /etc/tomcat/server.xml` to find the `<Connector>` tag that specifies `port="8080"` and changed it to port="3001". Saved and exited. 
+- used $ `sudo vi /etc/tomcat/server.xml` to find the `<Connector>` tag that specifies `port="8080"` and changed it to port="3001". Saved and exited.
+
+### 3. Deploy the ROOT.war 
+
+- To make the application accessible at the base URL (e.g., `http://stapp01:3001`), you must replace the default Tomcat root directory:  Clear the existing webapps content:
+```
+$ sudo rm -rf /var/lib/tomcat/webapps/ROOT*
+```
+- Copy the `ROOT.war` from the `Jump host` to `App Server 1`. From the Jump host:
+```
+thor@jump-host ~$ scp /tmp/ROOT.war tony@stapp01:/tmp
+tony@stapp01's password: 
+ROOT.war                   
+```
+
+- Move the file to the Tomcat deployment directory on App Server 1:
+```
+$ sudo mv /tmp/ROOT.war /var/lib/tomcat/webapps/
+```
+
+### 4. Start the Service
+
+- Start and enable Tomcat to ensure the changes take effect:
+```
+$ sudo systemctl enable tomcat
+sudo systemctl start tomcat 
+```
+
+### 5. Verify
+
+- Run the curl command to check if the deployment was successful: 
+$ `curl http://stapp01:3001`
+```
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SampleWebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Welcome to xFusionCorp Industries!</h2>
+        <br>
+    
+    </body>
+</html>
+```
 
