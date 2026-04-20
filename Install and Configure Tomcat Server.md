@@ -31,4 +31,7 @@ drwxr-xr-x 2 root tomcat   4096 Apr 17 06:39 conf.d
 -rw-r--r-- 1 root tomcat 173782 Mar 13 14:35 web.xml
 ```
 
+### 2. Configure Port 3001
+
+- used $ `sudo vi /etc/tomcat/server.xml` to find the `<Connector>` tag that specifies `port="8080"` and changed it to port="3001". Saved and exited. 
 
