@@ -6,3 +6,7 @@ CI/CD is a method of developing software that enables frequent delivery of appli
 ## 2. Importance of Automation:
 
 CI/CD relies heavily on automation throughout the software development lifecycle. This automation minimizes human intervention in various stages like code integration, testing, building, and deployment. By reducing manual processes, the risk of human error is decreased, thereby increasing overall development speed.
+
+## 3. Traditional vs. Modern Software Development: 
+
+There are shortcomings of traditional software development methodologies, which often lead to slower release cycles and less reliable deployments. The transition to CI/CD practices addresses these challenges by streamlining and integrating processes for quicker and more reliable releases.
