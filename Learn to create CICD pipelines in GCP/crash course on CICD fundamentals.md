@@ -14,3 +14,7 @@ There are shortcomings of traditional software development methodologies, which 
 ## 4. Cultural Shift: 
 
 Adopting a CI/CD culture fosters improved collaboration among development teams, making it easier to implement changes and share responsibilities.
+
+
+
+
