@@ -10,3 +10,7 @@ CI/CD relies heavily on automation throughout the software development lifecycle
 ## 3. Traditional vs. Modern Software Development: 
 
 There are shortcomings of traditional software development methodologies, which often lead to slower release cycles and less reliable deployments. The transition to CI/CD practices addresses these challenges by streamlining and integrating processes for quicker and more reliable releases.
+
+## 4. Cultural Shift: 
+
+Adopting a CI/CD culture fosters improved collaboration among development teams, making it easier to implement changes and share responsibilities.
