@@ -17,3 +17,5 @@ The core of the pipeline creation involves defining a build configuration file (
 
 Each step in the configuration file specifies a particular action. For example, to execute the Python application, opts for the Python image from Docker Hub, ensuring that the appropriate container environment is set up for execution.
 
+> [!NOTE]
+> successful code commit and push to the repository will trigger the CI/CD pipeline automatically.
