@@ -19,3 +19,13 @@ Each step in the configuration file specifies a particular action. For example, 
 
 > [!NOTE]
 > successful code commit and push to the repository will trigger the CI/CD pipeline automatically.
+
+
+## workflow: 
+
+- create a repository in github.
+- create a Personal Access Token in GitHub settings to allow local server to connect with this remote github repo.
+- in local server do git clone repo path
+- create `main.py` and `cloudbuild.yaml` in local server git repo.
+- create a cloud build trigger to trigger a build whenever a push is done from local to remote repo.
+- `cloudbuild.yaml` contains command to compile python code and we can add testing and artifacts creation steps. So basically this file contains steps that we want it to perform whenever a change(e.g. push to git remote repo) is made. Hence, continous integration (CI) happens here, it reduces manual toil, errors, long feedfack cycles, built automation.
